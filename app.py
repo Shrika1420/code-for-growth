@@ -1,5 +1,5 @@
 # Triggering githubs actions manually
-
+# This is my first Flask app
 from flask import Flask, jsonify # type: ignore
 
 app = Flask(__name__)
