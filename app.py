@@ -1,4 +1,4 @@
-# Triggering CI
+# Triggering githubs actions manually
 
 from flask import Flask, jsonify # type: ignore
 
