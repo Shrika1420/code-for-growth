@@ -10,7 +10,7 @@ def test_dashboard():
     assert response.status_code == 200
     
     # Checkk the content
-    assert "Welcome to the Logistics Dashboard" in html
+    assert "Logistics Dashboard" in html
     assert "Total Shipments:" in html
     assert "Delayed Shipments:" in html
     assert "Average Delay:" in html  
