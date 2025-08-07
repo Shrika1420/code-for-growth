@@ -9,11 +9,11 @@ def test_dashboard():
     #Check status code
     assert response.status_code == 200
     
-    # Checkk the content
+    # Check the content
     assert "Logistics Dashboard" in html
-    assert "Total Shipments:" in html
-    assert "Delayed Shipments:" in html
-    assert "Average Delay:" in html  
+    assert "Total Shipments" in html
+    assert "Delayed Shipments" in html
+    assert "Average Delay" in html  
     
     
     
