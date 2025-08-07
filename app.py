@@ -45,8 +45,8 @@ def analyze_logistics_delay():
             total_shipments = int(df.shape[0])
         
         elif 'expected_delivery_time' in df.columns and 'actual_delivery_time' in df.columns:
-            df[expected_delivery_time] = pd.to_datetime(df['expected_delivery_time'])
-            df[actual_delivery_time] = pd.to_datetime(df['actual_delivery_time'])
+            df['expected_delivery_time'] = pd.to_datetime(df['expected_delivery_time'])
+            df['actual_delivery_time'] = pd.to_datetime(df['actual_delivery_time'])
             df['Logistics_Delay'] = (df['actual_delivery_time'] - df['expected_delivery_time']).dt.total_seconds() / 60
             average_delay = df['Logistics_Delay'].mean()
             max_delay = df['Logistics_Delay'].max()
