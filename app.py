@@ -1,8 +1,8 @@
 # Triggering githubs actions manually
 # This is my first Flask app
 from flask import Flask, jsonify, Response, request, render_template # type: ignore
-import pandas as pd # type: ignore
-import matplotlib.pyplot as plt # type: ignore
+import pandas as pd 
+import matplotlib.pyplot as plt 
 import io
 import os
 
