@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logistics Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f8f9fa; }
+        .card { margin-bottom: 20px; }
+        .dashboard-title { margin: 30px 0 20px 0; color: #2c3e50; }
+        .chart-img { background: #fff; border: 1px solid #dee2e6; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="dashboard-title text-center">Logistics Dashboard</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Shipments</h5>
+                        <p class="card-text display-6">{{ total_shipments }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Delayed Shipments</h5>
+                        <p class="card-text display-6">{{ delayed_shipments }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Average Delay</h5>
+                        <p class="card-text display-6">{{ average_delay }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="mt-4">Delay Distribution</h2>
+                <div class="chart-img text-center">
+                    <img src="/logistics/delay-plot" alt="Delay Distribution" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h2 class="mt-4">Daily Delayed Shipments</h2>
+                <div class="chart-img text-center">
+                    <img src="/logistics/delay/timeseries" alt="Daily Delayed Shipments" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h2 class="mt-4">User Purchase Frequency</h2>
+                <div class="chart-img text-center">
+                    <img src="/logistics/user_purchase_frequency" alt="User Purchase Frequency" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
